@@ -1,0 +1,17 @@
+{
+  "name": "dto-ui-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "publish": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mustache": "^4.0.1",
+    "mustache": "^4.0.1",
+    "reflect-metadata": "^0.1.13"
+  }
+}
