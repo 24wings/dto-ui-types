@@ -5,12 +5,14 @@
   "main": "lib/index.js",
   "scripts": {
     "publish": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "npm link"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/mustache": "^4.0.1",
+    "@types/node": "^14.6.0",
     "mustache": "^4.0.1",
     "reflect-metadata": "^0.1.13"
   }

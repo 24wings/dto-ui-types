@@ -3,3 +3,4 @@ export * from './form.decorator';
 export * from './iif.decorator';
 export * from './query-bar.decorator';
 export * from './stable.decorator';
+export * from './column.decorator';

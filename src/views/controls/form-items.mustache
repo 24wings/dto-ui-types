@@ -1,0 +1,18 @@
+  {{#toolbar.formItems}}
+        <nz-form-item nz-col nzSpan="12">
+          <div nz-row>
+            <nz-form-label nz-col nzSpan="6" for="{{label}}">&lt;{ "{{label}}" | localize }}
+            </nz-form-label>
+            <nz-form-control nz-col nzSpan="16">
+              <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+                <input nz-input [(ngModel)]="filter.{{field}}" id="TenantNameOrTenancyCode" name="{{field}}"
+                       placeholder="&lt;{ 'SearchWithThreeDot' | localize }}" type="text" />
+              </nz-input-group>
+              <ng-template #suffixIconButton>
+                <button nz-button nzType="primary" nzSearch><i nz-icon nzType="search"></i></button>
+              </ng-template>
+
+            </nz-form-control>
+          </div>
+        </nz-form-item>
+        {{/toolbar.formItems}}

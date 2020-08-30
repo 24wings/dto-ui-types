@@ -2,10 +2,11 @@ import { Form } from "../meta-decorator/form.decorator";
 import { Field } from "../meta-decorator/form-item.decorator";
 import { QueryBar } from "../meta-decorator/query-bar.decorator";
 import { StableTable } from "../meta-decorator/stable.decorator";
+import { Col as Column } from "../meta-decorator/column.decorator";
 
 @QueryBar<TenantQueryBar>({ loadUrl: '' })
 export class TenantQueryBar {
-  @Field({ label: '公司名称/公司代码' })
+  @Field({ label: '公司名称 公司代码' })
   Filter: string;
   @Field({
     label: '版本',
@@ -51,19 +52,19 @@ export class TenantCreateForm {
 
 @StableTable({ title: "租户" })
 export class TenantList {
-  @Field({ label: 'id', control: 'text' })
+  @Column({ title: 'id', type: 'text' })
   id: number;
-  @Field({ label: '公司姓名', control: 'text' })
+  @Column({ title: '公司姓名', type: 'text' })
   name: string;
-  @Field({ label: '租户姓名', control: 'text' })
+  @Column({ title: '租户姓名', type: 'text' })
   tenancyName: string;
-  @Field({ label: '激活', control: 'checkbox' })
+  @Column({ title: '激活', type: 'checkbox' })
   isActive: boolean;
-  @Field({ label: '过渡期', control: 'checkbox' })
+  @Column({ title: '过渡期', type: 'checkbox' })
   isInTrialPeriod: boolean;
-  @Field({ label: '是否随机密码', control: 'checkbox' })
+  @Column({ title: '是否随机密码', type: 'checkbox' })
   isRandomPassword: boolean;
-  @Field({ label: '管理员密码', control: 'text' })
+  @Column({ title: '管理员密码', type: 'text' })
   adminPassword: string;
   subscriptionEndDateUtc: Date;
   editionDisplayName: string;
